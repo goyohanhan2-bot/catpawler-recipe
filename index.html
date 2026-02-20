@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CATPAWLER RECIPE</title>
+    <style>
+        :root {
+            --cat-orange: #e67e22;
+            --cat-dark: #2d3436;
+            --cat-cream: #f9f9f9;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: var(--cat-cream);
+            color: var(--cat-dark);
+            line-height: 1.6;
+        }
+        nav {
+            background-color: var(--cat-dark);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+        nav a:hover { color: var(--cat-orange); }
+
+        /* Home/Profile Section */
+        .home-section {
+            background-color: white;
+            padding: 40px 20px;
+            border-bottom: 4px solid var(--cat-orange);
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        /* Fixed Profile Image Size */
+        .profile-img {
+            width: 180px; 
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--cat-orange);
+            object-fit: cover; /* Keeps the cat from looking squashed */
+        }
+        .main-title {
+            font-size: 3.5em;
+            margin: 0;
+            color: var(--cat-dark);
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .category-header {
+            background: var(--cat-orange);
+            color: white;
+            padding: 15px;
+            margin-top: 50px;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        /* Recipe Table Styling */
+        .recipe-table {
+            width: 100%;
+            background: white;
+            margin-bottom: 40px;
+            border-collapse: collapse;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            table-layout: fixed; /* Helps keep columns equal */
+        }
+        .recipe-image-cell {
+            width: 50%; /* Bigger image area */
+            padding: 0;
+            vertical-align: middle;
+            background: #000; /* Black bars if image ratio is off */
+        }
+        /* Forces all recipe images to be the exact same large size */
+        .recipe-img {
+            width: 100%;
+            height: 450px; 
+            object-fit: cover; 
+            display: block;
+        }
+        .recipe-content-cell {
+            padding: 30px;
+            vertical-align: top;
+        }
+        h3 { color: var(--cat-orange); font-size: 1.8em; margin-top: 0; }
+
+        #contact {
+            background: #dfe6e9;
+            padding: 40px;
+            margin-top: 60px;
+            border-radius: 10px;
+        }
+        footer {
+            background: var(--cat-dark);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#appetizer">Appetizers</a>
+        <a href="#lunch">Lunch</a>
+        <a href="#dinner">Dinner</a>
+        <a href="#dessert">Dessert</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="home-section">
+        <div class="header-container">
+            <img src="bos.jpeg" alt="bos" class="profile-img"> 
+            <div>
+                <h1 class="main-title">CAT PAWLER</h1>
+                <p style="font-style: italic;">"Welcome to Cat Pawler! Traveler! Where every dishes is purr-fectly delicious! Explore our favorite recipes and start your cooking adventure today-meow!."</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <h2 id="appetizer" class="category-header">Appetizers</h2>
+        <table class="recipe-table">
+            <tr>
+                <td class="recipe-image-cell"><img src="lum.jpg" alt="Lumpia" class="recipe-img"></td>
+                <td class="recipe-content-cell">
+                    <h3>Lumpia</h3>
+                    <strong>Ingredients:</strong> Ground pork, onions, carrots, garlic powder, parsley, sesame oil, eggs, wrappers.
+                    <p><strong>Instructions:</strong> Mix all filling ingredients well. Scoop 1.5 tbsp onto a wrapper, fold the sides, and roll tightly. Seal with egg wash. Deep fry in medium heat until golden brown and floating.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="recipe-image-cell"><img src="sig.jpg" alt="Sisig" class="recipe-img"></td>
+                <td class="recipe-content-cell">
+                    <h3>Pork Sisig</h3>
+                    <strong>Ingredients:</strong> Pig ears, snout, belly, ginger, bay leaves, onions.
+                    <p><strong>Instructions:</strong> Boil meats with ginger and bay leaves for 1 hour until tender. Grill the meat for 5 minutes per side, then chop into small bits. Toss with minced onions and dressing until well blended.</p>
+                </td>
+            </tr>
+        </table>
+
+        <h2 id="lunch" class="category-header">Lunch</h2>
+        <table class="recipe-table">
+            <tr>
+                <td class="recipe-image-cell"><img src="ma.jpg" alt="Adobo" class="recipe-img"></td>
+                <td class="recipe-content-cell">
+                    <h3>Chicken Adobo</h3>
+                    <strong>Ingredients:</strong> Chicken, soy sauce, vinegar, garlic, bay leaves, peppercorns.
+                    <p><strong>Instructions:</strong> Marinate chicken in soy sauce and garlic for 1 hour. Pan-fry chicken for 2 minutes per side. Pour in marinade and water; boil. Add bay leaves and peppercorns; simmer for 30 mins. Add vinegar, cook 10 more mins, then finish with sugar and salt.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="recipe-image-cell"><img src="ta.jpg" alt="Tortang Talong" class="recipe-img"></td>
+                <td class="recipe-content-cell">
+                    <h3>Tortang Talong</h3>
+                    <strong>Ingredients:</strong> Chinese eggplant, eggs, salt, oil.
+                    <p><strong>Instructions:</strong> Grill eggplant until skin is charred black. Peel skin once cool. Flatten the eggplant with a fork. Dip in seasoned beaten eggs and fry for 3-4 minutes per side until golden.</p>
+                </td>
+            </tr>
+        </table>
+
+        <h2 id="dinner" class="category-header">Dinner</h2>
+        <table class="recipe-table">
+            <tr>
+                <td class="recipe-image-cell"><img src="sin.jpg" alt="Sinigang" class="recipe-img"></td>
+                <td class="recipe-content-cell">
+                    <h3>Sinigang Pork Chop</h3>
+                    <strong>Ingredients:</strong> Pork chops, okra, beans, tomato, spinach, eggplant, sinigang mix.
+                    <p><strong>Instructions:</strong> Boil water with tomato and onion. Add pork and simmer for 40 mins. Add sinigang mix and vegetables; cook for 12 mins. Stir in fish sauce and spinach, then let it sit covered for 5 mins before serving.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="recipe-image-cell"><img src="puss.jpg" alt="Pusit" class="recipe-img"></td>
+                <td class="recipe-content-cell">
+                    <h3>Pusit Adobo</h3>
+                    <strong>Ingredients:</strong> Small squid, garlic, tomato, onion, soy sauce, vinegar, sugar.
+                    <p><strong>Instructions:</strong> Sauté garlic, onion, and tomato. Add water, soy sauce, and bay leaves; bring to a boil. Add squid and cook for just 1 minute. Stir in vinegar and sugar, boil again, and season with salt and pepper.</p>
+                </td>
+            </tr>
+        </table>
+
+        <h2 id="dessert" class="category-header">Dessert</h2>
+        <table class="recipe-table">
+            <tr>
+                <td class="recipe-image-cell"><img src="leche.jpg" alt="leche flan" class="recipe-img"></td>
+                <td class="recipe-content-cell">
+                    <h3>Leche Flan</h3>
+                    <strong>Ingredients:</strong> 10 Egg yolks, condensed milk, evaporated milk, vanilla, sugar.
+                    <p><strong>Instructions:</strong> Beat yolks and mix with milks and vanilla. Caramelize sugar in a mold over low heat. Pour mixture into mold, cover with foil, and steam for 35 mins. Cool and refrigerate before serving.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="recipe-image-cell"><img src="ban.png" alt="Banana Bread" class="recipe-img"></td>
+                <td class="recipe-content-cell">
+                    <h3>Banana Bread</h3>
+                    <strong>Ingredients:</strong> Ripe bananas, sugar, flour, eggs, oil, baking soda.
+                    <p><strong>Instructions:</strong> Mash bananas and mix with wet ingredients. Gradually stir in dry ingredients. Pour into a greased pan and bake at 350°F for about 1 hour. Cool before slicing.</p>
+                </td>
+            </tr>
+        </table>
+ <div class="dabloon-farewell">
+            <img src="dabloon.jpeg" alt="Dabloon Cat" class="dabloon-img" style="width: 160px; border-radius: 50px: vertival-align: middle 50px;">
+     
+            <h2>Halt, Traveler!</h2>
+            <p style="font-size: 1.2em; font-family: 'Courier New', Courier, monospace;">
+                "You have reached the end of the menu. Your journey has been long, but your stomach is now full. <br>
+                Take these <strong>4 dabloons</strong> as a gift. Safe travels, friend... Meow!"
+            </p>
+        </div>
+        
+        <section id="contact">
+            <h2>Contact Catpawler</h2>
+            <p><strong>Address:</strong> 88 Pawprint Lane, Quezon City, PH</p>
+            <p><strong>Email:</strong> contact@catpawler.com</p>
+            <form>
+                <input type="text" placeholder="Your Name" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                <textarea placeholder="Message Me" style="width: 100%; height: 80px; padding: 10px;"></textarea>
+                <button type="button" style="background: var(--cat-orange); color: white; border: none; padding: 10px 20px; cursor: pointer;">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Codes – CATPAWLER RECIPE-MEOW. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
